@@ -1,0 +1,71 @@
+const { createHistorique, getHistorique, updateHistorique, deleteHistorique } = require("./historique.service");
+
+
+module.exports = {
+    createHistorique: (req, res) => {
+        const data = req.body;
+        createHistorique(data, (err, results) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).json({
+                    success: 0,
+                    message: "erreur de connexion à la base de données"
+                });
+            }
+            return res.status(200).json({
+                success: 1,
+                data: results
+            });
+        });
+    },
+    getHistorique: (req, res) => {
+        getHistorique((err, results) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            return res.json({
+                success: 1,
+                data: results
+            });
+        });
+    },
+    updateHistorique: (req, res) => {
+        const data = req.body;
+        updateHistorique(data, (err, results) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            if (!results) {
+                return res.json({
+                    success: 0,
+                    message: "échec mise à jour de la catégorie"
+                });
+            }
+            return res.json({
+                success: 1,
+                message: "mise à jour réussie"
+            });
+        });
+    },
+    deleteHistorique: (req, res) => {
+        const data = req.query;
+        deleteHistorique(data, (err, results) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            if (!results) {
+                return res.json({
+                    success: 0,
+                    message: "données non trouvées"
+                });
+            }
+            return res.json({
+                success: 1,
+                message: "categorie supprimée avec succès"
+            });
+        });
+    }
+};
