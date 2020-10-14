@@ -40,7 +40,7 @@ module.exports = {
             if (!results) {
                 return res.json({
                     success: 0,
-                    message: "échec mise à jour de la catégorie"
+                    message: "échec mise à jour du capteur"
                 });
             }
             return res.json({
@@ -59,12 +59,12 @@ module.exports = {
             if (!results) {
                 return res.json({
                     success: 0,
-                    message: "données non trouvées"
+                    message: "capteur non trouvé"
                 });
             }
             return res.json({
                 success: 1,
-                message: "categorie supprimée avec succès"
+                message: "capteur supprimé avec succès"
             });
         });
     }

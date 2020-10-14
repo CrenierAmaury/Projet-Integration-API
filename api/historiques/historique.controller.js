@@ -1,4 +1,4 @@
-const { createHistorique, getHistorique, updateHistorique, deleteHistorique } = require("./historique.service");
+const { createHistorique, getHistorique } = require("./historique.service");
 
 
 module.exports = {
@@ -27,44 +27,6 @@ module.exports = {
             return res.json({
                 success: 1,
                 data: results
-            });
-        });
-    },
-    updateHistorique: (req, res) => {
-        const data = req.body;
-        updateHistorique(data, (err, results) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            if (!results) {
-                return res.json({
-                    success: 0,
-                    message: "échec mise à jour de la catégorie"
-                });
-            }
-            return res.json({
-                success: 1,
-                message: "mise à jour réussie"
-            });
-        });
-    },
-    deleteHistorique: (req, res) => {
-        const data = req.query;
-        deleteHistorique(data, (err, results) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            if (!results) {
-                return res.json({
-                    success: 0,
-                    message: "données non trouvées"
-                });
-            }
-            return res.json({
-                success: 1,
-                message: "categorie supprimée avec succès"
             });
         });
     }

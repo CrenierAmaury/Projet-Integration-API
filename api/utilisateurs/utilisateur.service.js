@@ -8,7 +8,7 @@ module.exports = {
             'values(?,?)',
             [
                 data.nom,
-                data.details,
+                data.prenom,
             ],
             (error, results, fields) => {
                 if (error) {
@@ -36,7 +36,7 @@ module.exports = {
             'update utilisateurs set nom=?, prenom=? where id = ?',
             [
                 data.nom,
-                data.details,
+                data.prenom,
                 data.id
             ],
             (error, results, fields) => {

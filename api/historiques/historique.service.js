@@ -7,8 +7,10 @@ module.exports = {
             'insert into historiques(oiseau, date, localisation, capteur) ' +
             'values(?,?,?,?)',
             [
-                data.nom,
-                data.details,
+                data.oiseau,
+                data.date,
+                data.localisation,
+                data.capteur
             ],
             (error, results, fields) => {
                 if (error) {
