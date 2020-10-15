@@ -18,11 +18,11 @@ module.exports = {
             }
         );
     },
-    getUtilisateur: callBack => {
+    getUtilisateurById: (data, callBack) => {
         pool.query(
-            'select id, nom, prenom from utilisateurs \n' +
+            'select * from utilisateurs where id = ? \n' +
             'order by nom',
-            [],
+            [data.id],
             (error, results, fields) => {
                 if (error) {
                     return callBack(error);

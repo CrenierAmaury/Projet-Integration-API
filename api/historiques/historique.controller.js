@@ -1,4 +1,4 @@
-const { createHistorique, getHistorique } = require("./historique.service");
+const { createHistorique, getHistoriques, getHistoriquesByUtilisateur } = require("./historique.service");
 
 
 module.exports = {
@@ -18,8 +18,20 @@ module.exports = {
             });
         });
     },
-    getHistorique: (req, res) => {
-        getHistorique((err, results) => {
+    getHistoriques: (req, res) => {
+        getHistoriques((err, results) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            return res.json({
+                success: 1,
+                data: results
+            });
+        });
+    },
+    getHistoriquesByUtilisateur: (req, res) => {
+        getHistoriquesByUtilisateur((err, results) => {
             if (err) {
                 console.log(err);
                 return;

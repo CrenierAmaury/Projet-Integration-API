@@ -20,11 +20,24 @@ module.exports = {
             }
         );
     },
-    getHistorique: callBack => {
+    getHistoriques: callBack => {
         pool.query(
-            'select id, oiseau, date, localisation, capteur from historiques \n' +
-            'order by date',
+            'select * from historiques \n' +
+            'order by date, oiseau',
             [],
+            (error, results, fields) => {
+                if (error) {
+                    return callBack(error);
+                }
+                return callBack(null, results);
+            }
+        );
+    },
+    getHistoriquesByUtilisateur: (data, callBack) => {
+        pool.query(
+            'select * from historiques where capteur = ?  \n' +
+            'order by date, oiseau',
+            [data.capteur],
             (error, results, fields) => {
                 if (error) {
                     return callBack(error);

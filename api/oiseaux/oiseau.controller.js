@@ -1,9 +1,10 @@
-const { getOiseau } = require("./oiseau.service");
+const { getOiseaux } = require("./oiseau.service");
 
 
 module.exports = {
-    getOiseau: (req, res) => {
-        getOiseau((err, results) => {
+    getOiseaux: (req, res) => {
+        const data = req.params;
+        getOiseaux(data, (err, results) => {
             if (err) {
                 console.log(err);
                 return;

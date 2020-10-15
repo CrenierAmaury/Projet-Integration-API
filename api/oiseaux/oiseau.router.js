@@ -1,6 +1,6 @@
-const { getOiseau } = require("./oiseau.controller");
+const { getOiseaux } = require("./oiseau.controller");
 const router = require("express").Router();
 
-router.get("/", getOiseau);
+router.get("/:recherche", getOiseaux);
 
 module.exports = router;

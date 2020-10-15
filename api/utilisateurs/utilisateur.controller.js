@@ -17,8 +17,9 @@ module.exports = {
             });
         });
     },
-    getUtilisateur: (req, res) => {
-        getUtilisateur((err, results) => {
+    getUtilisateurById: (req, res) => {
+        const data = req.body;
+        getUtilisateurById(data, (err, results) => {
             if (err) {
                 console.log(err);
                 return;

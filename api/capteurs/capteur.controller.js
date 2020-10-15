@@ -1,4 +1,4 @@
-const { createCapteur, getCapteur, updateCapteur, deleteCapteur } = require("./capteur.service");
+const { createCapteur, getCapteursByUtilisateur, updateCapteur, deleteCapteur } = require("./capteur.service");
 
 
 module.exports = {
@@ -18,8 +18,9 @@ module.exports = {
             });
         });
     },
-    getCapteur: (req, res) => {
-        getCapteur((err, results) => {
+    getCapteursByUtilisateur: (req, res) => {
+        const data = req.body;
+        getCapteursByUtilisateur(data, (err, results) => {
             if (err) {
                 console.log(err);
                 return;

@@ -18,11 +18,11 @@ module.exports = {
             }
         );
     },
-    getCapteur: callBack => {
+    getCapteursByUtilisateur: (data, callBack) => {
         pool.query(
-            'select numeroSerie, utilisateur from capteurs \n' +
+            'select * from capteurs where utilisateur = ? \n' +
             'order by numeroSerie',
-            [],
+            [data.utilisateur],
             (error, results, fields) => {
                 if (error) {
                     return callBack(error);
