@@ -20,7 +20,7 @@ module.exports = {
     },
     getUtilisateurById: (data, callBack) => {
         pool.query(
-            'select * from utilisateurs where id = ? \n' +
+            'select * from utilisateurs where idutilisateurs = ? \n' +
             'order by nom',
             [data.id],
             (error, results, fields) => {
