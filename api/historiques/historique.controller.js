@@ -31,7 +31,8 @@ module.exports = {
         });
     },
     getHistoriquesByUtilisateur: (req, res) => {
-        getHistoriquesByUtilisateur((err, results) => {
+        data = req.body;
+        getHistoriquesByUtilisateur(data, (err, results) => {
             if (err) {
                 console.log(err);
                 return;

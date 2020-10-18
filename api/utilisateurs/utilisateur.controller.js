@@ -1,4 +1,4 @@
-const { createUtilisateur, getUtilisateur, updateUtilisateur, deleteUtilisateur } = require("./utilisateur.service");
+const { createUtilisateur, getUtilisateurById, updateUtilisateur, deleteUtilisateur } = require("./utilisateur.service");
 
 module.exports = {
     createUtilisateur: (req, res) => {
