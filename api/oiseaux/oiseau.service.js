@@ -5,7 +5,7 @@ module.exports = {
     getOiseaux: (data, callBack) => {
         pool.query(
             'select idoiseaux, nom, espece, details from oiseaux \n' +
-            'where nom like \%' + data.recherche +
+            'where nom like \'%' + data.recherche +
             '%\' or espece like \'%' + data.recherche + '%\' \n' +
             'order by nom, espece',
             [],
