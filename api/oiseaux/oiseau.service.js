@@ -2,7 +2,7 @@ const pool = require("../../config/database");
 
 
 module.exports = {
-    getOiseaux: callBack => {
+    getOiseaux: (data, callBack) => {
         pool.query(
             'select idoiseaux, nom, espece, details from oiseaux \n' +
             'where nom like \%' + data.recherche +
