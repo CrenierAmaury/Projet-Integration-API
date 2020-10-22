@@ -18,7 +18,7 @@ module.exports = {
         });
     },
     getUtilisateurById: (req, res) => {
-        const data = req.body;
+        const data = req.query;
         getUtilisateurById(data, (err, results) => {
             if (err) {
                 console.log(err);

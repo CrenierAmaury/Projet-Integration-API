@@ -19,7 +19,7 @@ module.exports = {
         });
     },
     getCapteursByUtilisateur: (req, res) => {
-        const data = req.body;
+        const data = req.query;
         getCapteursByUtilisateur(data, (err, results) => {
             if (err) {
                 console.log(err);
