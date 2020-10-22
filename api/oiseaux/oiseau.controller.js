@@ -3,7 +3,7 @@ const { getOiseaux } = require("./oiseau.service");
 
 module.exports = {
     getOiseaux: (req, res) => {
-        const data = req.body;
+        const data = req.query;
         getOiseaux(data, (err, results) => {
             if (err) {
                 console.log(err);

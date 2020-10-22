@@ -7,16 +7,24 @@ module.exports = {
         const email = data.email;
         const password = data.password;
         const extras = "";
+        let token = "";
         firebase.registerWithEmail(email, password, extras, function (err, results) {
             if (err) {
                 console.log(err);
                 return;
             }
+            token = results.token;
             return res.json({
                 success: 1,
                 message: "inscription réalisée",
                 data: results
             });
+        });
+        firebase.sendVerificationEmail(token, function(err, result) {
+            if (err)
+                console.log(err);
+            else
+                console.log(result);
         });
     },
     signIn: (req, res) => {
