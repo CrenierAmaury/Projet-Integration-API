@@ -4,11 +4,12 @@ const pool = require("../../config/database");
 module.exports = {
     createUtilisateur: (data, callback) =>{
         pool.query(
-            'insert into utilisateurs(nom, prenom) ' +
-            'values(?,?)',
+            'insert into utilisateurs(nom, prenom, email) ' +
+            'values(?,?,?)',
             [
                 data.nom,
                 data.prenom,
+                data.email
             ],
             (error, results, fields) => {
                 if (error) {
@@ -33,10 +34,11 @@ module.exports = {
     },
     updateUtilisateur: (data, callBack) => {
         pool.query(
-            'update utilisateurs set nom=?, prenom=? where id = ?',
+            'update utilisateurs set nom=?, prenom=?, email=? where id = ?',
             [
                 data.nom,
                 data.prenom,
+                data.email,
                 data.id
             ],
             (error, results, fields) => {
