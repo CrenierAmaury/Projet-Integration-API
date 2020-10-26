@@ -19,11 +19,11 @@ module.exports = {
             }
         );
     },
-    getUtilisateurById: (data, callBack) => {
+    getUtilisateurByEmail: (data, callBack) => {
         pool.query(
-            'select * from utilisateurs where idutilisateurs = ? \n' +
+            'select * from utilisateurs where email = ? \n' +
             'order by nom',
-            [data.id],
+            [data.email],
             (error, results, fields) => {
                 if (error) {
                     return callBack(error);
