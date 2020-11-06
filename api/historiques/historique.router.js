@@ -3,6 +3,6 @@ const router = require("express").Router();
 
 router.post("/", createHistorique);
 router.get("/all", getHistoriques);
-router.get("/", getHistoriquesByUtilisateur);
+router.get("/", checkToken, getHistoriquesByUtilisateur);
 
 module.exports = router;

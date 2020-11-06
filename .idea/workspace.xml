@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16faff0d-775d-40be-8460-58eac40d4562" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/auth/checkToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menura-api-firebase-adminsdk-740yo-df66a92ba2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/utilisateurs/utilisateur.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/utilisateurs/utilisateur.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/capteurs/capteur.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/capteurs/capteur.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/historiques/historique.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/historiques/historique.router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/utilisateurs/utilisateur.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/utilisateurs/utilisateur.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/utilisateurs/utilisateur.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/utilisateurs/utilisateur.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +27,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Documents/GitHub/Projet_Web_19" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projet d'intégration\Projet-Integration-API" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,7 +61,10 @@
       <workItem from="1603204079867" duration="1472000" />
       <workItem from="1603352420131" duration="3443000" />
       <workItem from="1603737091310" duration="1531000" />
-      <workItem from="1603743598096" duration="2121000" />
+      <workItem from="1603743598096" duration="2364000" />
+      <workItem from="1604426662171" duration="1838000" />
+      <workItem from="1604577910506" duration="5392000" />
+      <workItem from="1604679751685" duration="7881000" />
     </task>
     <servers />
   </component>
@@ -60,10 +72,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603356567661">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="686" y="211" key="FileChooserDialogImpl" timestamp="1604685659800">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="686" y="211" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603203008503" />
+    <state x="686" y="211" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604685659800" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603356567661" />
   </component>
 </project>
