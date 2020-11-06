@@ -1,3 +1,4 @@
+const { checkToken } = require("../../auth/checkToken");
 const { createHistorique, getHistoriques, getHistoriquesByUtilisateur } = require("./historique.controller");
 const router = require("express").Router();
 
