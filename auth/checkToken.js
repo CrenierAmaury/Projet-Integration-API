@@ -11,6 +11,8 @@ module.exports = {
     checkToken: (req, res, next) => {
         console.log("start check")
         let token = req.header('authorization').split(" ")[1];
+        console.log(req.header)
+        console.log(req.header('authorization'))
         console.log(token)
         if (token) {
             admin.auth().verifyIdToken(token)
