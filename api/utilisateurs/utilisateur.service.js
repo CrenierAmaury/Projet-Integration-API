@@ -4,8 +4,8 @@ const pool = require("../../config/database");
 module.exports = {
     createUtilisateur: (data, callback) =>{
         pool.query(
-            'insert into utilisateurs(nom, prenom, email) ' +
-            'values(?,?,?)',
+            'insert into utilisateurs(idutilisateurs, nom, prenom, email) ' +
+            'values(?,?,?,?)',
             [
                 data.nom,
                 data.prenom,
@@ -19,11 +19,11 @@ module.exports = {
             }
         );
     },
-    getUtilisateurByEmail: (data, callBack) => {
+    getUtilisateurByUID: (data, callBack) => {
         pool.query(
-            'select * from utilisateurs where email = ? \n' +
+            'select * from utilisateurs where idutilisateurs = ? \n' +
             'order by nom',
-            [data.email],
+            [data.id],
             (error, results, fields) => {
                 if (error) {
                     return callBack(error);

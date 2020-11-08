@@ -1,4 +1,4 @@
-const { createUtilisateur, getUtilisateurByEmail, updateUtilisateur, deleteUtilisateur } = require("./utilisateur.service");
+const { createUtilisateur, getUtilisateurByUID, updateUtilisateur, deleteUtilisateur } = require("./utilisateur.service");
 
 module.exports = {
     createUtilisateur: (req, res) => {
@@ -17,9 +17,9 @@ module.exports = {
             });
         });
     },
-    getUtilisateurByEmail: (req, res) => {
+    getUtilisateurByUID: (req, res) => {
         const data = req.query;
-        getUtilisateurByEmail(data, (err, results) => {
+        getUtilisateurByUID(data, (err, results) => {
             if (err) {
                 console.log(err);
                 return;
