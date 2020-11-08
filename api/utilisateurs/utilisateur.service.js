@@ -7,6 +7,7 @@ module.exports = {
             'insert into utilisateurs(idutilisateurs, nom, prenom, email) ' +
             'values(?,?,?,?)',
             [
+                data.id,
                 data.nom,
                 data.prenom,
                 data.email
