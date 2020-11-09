@@ -10,9 +10,9 @@ admin.initializeApp({
 module.exports = {
     checkToken: (req, res, next) => {
         console.log("start check")
-        let token = req.header('Authorization').split(" ")[1];
-        console.log(req.header)
-        console.log(req.header('Authorization'))
+        let token = req.headers('Authorization').split(" ")[1];
+        console.log(req.headers)
+        console.log(req.headers('Authorization'))
         console.log(token)
         if (token) {
             admin.auth().verifyIdToken(token)
