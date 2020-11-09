@@ -4,10 +4,10 @@ const pool = require("../../config/database");
 module.exports = {
     createCapteur: (data, callback) =>{
         pool.query(
-            'insert into capteurs(numeroSerie, utilisateur) ' +
+            'insert into capteurs(macAddress, utilisateur) ' +
             'values(?,?)',
             [
-                data.numeroSerie,
+                data.macAddress,
                 data.utilisateur,
             ],
             (error, results, fields) => {
@@ -21,7 +21,7 @@ module.exports = {
     getCapteursByUtilisateur: (data, callBack) => {
         pool.query(
             'select * from capteurs where utilisateur = ? \n' +
-            'order by numeroSerie',
+            'order by macAddress',
             [data.utilisateur],
             (error, results, fields) => {
                 if (error) {
@@ -33,10 +33,10 @@ module.exports = {
     },
     updateCapteur: (data, callBack) => {
         pool.query(
-            'update capteurs set utilisateur=? where numeroSerie = ?',
+            'update capteurs set utilisateur=? where macAddress = ?',
             [
                 data.utilisateur,
-                data.numeroSerie
+                data.macAddress
             ],
             (error, results, fields) => {
                 if (error) {
@@ -48,8 +48,8 @@ module.exports = {
     },
     deleteCapteur: (data, callBack) => {
         pool.query(
-            'delete from capteurs where numeroSerie = ?',
-            [data.numeroSerie],
+            'delete from capteurs where macAddress = ?',
+            [data.macAddress],
             (error, results, fields) => {
                 if (error) {
                     return callBack(error);
