@@ -32,6 +32,7 @@ module.exports = {
     },
     getHistoriquesByUtilisateur: (req, res) => {
         const data = req.query;
+        console.log(data)
         getHistoriquesByUtilisateur(data, (err, results) => {
             if (err) {
                 console.log(err);

@@ -13,7 +13,6 @@ module.exports = {
         let token = req.header('authorization').split(" ")[1];
         console.log(req.header)
         console.log(req.header('authorization'))
-        console.log(token)
         if (token) {
             admin.auth().verifyIdToken(token)
                 .then(function(decodedToken) {
