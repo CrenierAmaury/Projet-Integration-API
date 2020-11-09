@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16faff0d-775d-40be-8460-58eac40d4562" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/historiques/historique.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/historiques/historique.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/historiques/historique.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/historiques/historique.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/checkToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/checkToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
       <workItem from="1604577910506" duration="5392000" />
       <workItem from="1604679751685" duration="10410000" />
       <workItem from="1604854913718" duration="8379000" />
-      <workItem from="1604931328788" duration="9149000" />
+      <workItem from="1604931328788" duration="9795000" />
     </task>
     <servers />
   </component>
