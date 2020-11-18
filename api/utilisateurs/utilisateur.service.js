@@ -56,7 +56,7 @@ module.exports = {
         pool.query(
             'UPDATE utilisateurs\n' +
             'SET nom = ?, prenom = ?, email = ?, actif = ?\n' +
-            'WHERE id = ?',
+            'WHERE idutilisateurs = ?',
             [
                 null,
                 null,
