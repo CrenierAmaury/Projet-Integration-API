@@ -2,6 +2,11 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://projet-int-ca671.web.app',
+    credentials: true
+}));
 
 
 const utilisateurRouter = require("./api/utilisateurs/utilisateur.router");
