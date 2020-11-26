@@ -57,5 +57,17 @@ module.exports = {
                 return callBack(null, results);
             }
         );
-    }
+    },
+    getCapteurs: (callBack) => {
+        pool.query(
+            'select * from capteurs',
+            [],
+            (error, results, fields) => {
+                if (error) {
+                    return callBack(error);
+                }
+                return callBack(null, results);
+            }
+        );
+    },
 };
