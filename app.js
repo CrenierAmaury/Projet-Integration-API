@@ -3,11 +3,19 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const rateLimit = require("express-rate-limit");
+
 app.use(cors({
     origin: 'https://projet-int-ca671.web.app',
     credentials: true
 }));
 
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100
+});
+
+app.use(limiter);
 
 const utilisateurRouter = require("./api/utilisateurs/utilisateur.router");
 const historiqueRouter = require("./api/historiques/historique.router");

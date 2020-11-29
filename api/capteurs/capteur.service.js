@@ -33,9 +33,9 @@ module.exports = {
     },
     updateCapteur: (data, callBack) => {
         pool.query(
-            'update capteurs set utilisateur=? where macAddress = ?',
+            'update capteurs set actif=? where macAddress = ?',
             [
-                data.utilisateur,
+                1,
                 data.macAddress
             ],
             (error, results, fields) => {
@@ -48,20 +48,13 @@ module.exports = {
     },
     deleteCapteur: (data, callBack) => {
         pool.query(
-            'delete from capteurs where macAddress = ?',
-            [data.macAddress],
-            (error, results, fields) => {
-                if (error) {
-                    return callBack(error);
-                }
-                return callBack(null, results);
-            }
-        );
-    },
-    getCapteurs: (callBack) => {
-        pool.query(
-            'select * from capteurs',
-            [],
+            'UPDATE capteurs\n' +
+            'SET actif = ?\n' +
+            'WHERE macAddress = ?',
+            [
+                0,
+                data.macAddress
+            ],
             (error, results, fields) => {
                 if (error) {
                     return callBack(error);
