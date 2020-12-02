@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16faff0d-775d-40be-8460-58eac40d4562" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/api/historiques/historique.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/historiques/historique.service.js" afterDir="false" />
-    </list>
+    <list default="true" id="16faff0d-775d-40be-8460-58eac40d4562" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +69,7 @@
       <workItem from="1606474549850" duration="183000" />
       <workItem from="1606582881771" duration="630000" />
       <workItem from="1606649940572" duration="10839000" />
-      <workItem from="1606879672072" duration="314000" />
+      <workItem from="1606879672072" duration="677000" />
     </task>
     <servers />
   </component>

@@ -36,7 +36,7 @@ module.exports = {
     getHistoriquesByUtilisateur: (data, callBack) => {
         pool.query(
             'select * from historiques where capteur IN (select macAddress from capteurs where utilisateur= ?) \n' +
-            'order by date desc',
+            'order by date desc, oiseau',
             [data.utilisateur],
             (error, results, fields) => {
                 if (error) {
