@@ -47,7 +47,12 @@ app.use("/v1/api/historiques", historiqueRouter);
 app.use("/v1/api/capteurs", capteurRouter);
 app.use("/v1/api/oiseaux", oiseauRouter);
 
-// http test
+//site vitrine
+app.use("/",function (req,res) {
+    res.redirect("https://projet-int-ca671.web.app/home");
+});
+
+// http
 //app.listen(process.env.APP_PORT, () =>{
     //console.log("Server up and running : ", process.env.APP_PORT);
 //});
