@@ -8,7 +8,7 @@ const cors = require('cors');
 const rateLimit = require("express-rate-limit");
 
 app.use(cors({
-    origin: 'https://projet-int-ca671.web.app',
+    origin: ['https://projet-int-ca671.web.app', 'https://localhost:4200'],
     credentials: true
 }));
 
